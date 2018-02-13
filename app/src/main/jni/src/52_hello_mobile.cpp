@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
                      "SDL_CreateWindowAndRenderer() failed: %s", SDL_GetError());
         return(2);
     }
-
+    //donno how this stuff works
     surface = IMG_ReadXPMFromArray(icon_xpm);
     texture = SDL_CreateTextureFromSurface(renderer, surface);
     if (!texture) {
@@ -79,14 +79,23 @@ int main(int argc, char *argv[])
             if (event.type == SDL_FINGERDOWN ){
                 touchLocation.x = event.tfinger.x * screenRect.w;
                 touchLocation.y = event.tfinger.y * screenRect.h;
-                SDL_Log("%d %d", screenRect.w,screenRect.h);
-                SDL_Log("%d %d", event.tfinger.x * screenRect.w, event.tfinger.y * screenRect.h);
-
+            }
+            if (event.type == SDL_FINGERMOTION ){
+                touchLocation.x = event.tfinger.x * screenRect.w;
+                touchLocation.y = event.tfinger.y * screenRect.h;
+            }
+            if (event.type == SDL_FINGERUP ){
+                touchLocation.x = screenRect.w / 2;
+                touchLocation.y = screenRect.h / 2;
             }
 
         }
 
-        SDL_Rect fillRect = { touchLocation.x-40, touchLocation.y-40, 80, 80};
+        //clear
+        SDL_RenderClear( renderer );
+        //GetTexture(State) somthing like this
+        SDL_RenderCopy(renderer, texture, NULL, NULL);
+        SDL_Rect fillRect = { touchLocation.x-10, touchLocation.y-10, 20, 20};
         SDL_SetRenderDrawColor( renderer, 0xFF, 0x00, 0x00, 0xFF );
         SDL_RenderFillRect( renderer, &fillRect );
         SDL_RenderPresent(renderer);

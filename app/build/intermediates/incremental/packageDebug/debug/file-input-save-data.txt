@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Feb 13 10:16:30 CET 2018
+#Tue Feb 13 10:33:24 CET 2018
 4.path=lib/x86/libSDL2_image.so
 8.set=DEX
 6.path=lib/armeabi-v7a/libSDL2_image.so
