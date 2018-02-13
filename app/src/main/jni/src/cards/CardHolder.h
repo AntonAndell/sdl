@@ -3,6 +3,7 @@
 //
 #include "Card.h"
 #include <vector>
+#include "SDL.h"
 
 using namespace std;
 #ifndef SDL_CARDHOLDER_H
@@ -13,6 +14,7 @@ class CardHolder {
     vector<Card> hand;
 public:
     void draw();
+    void handle_touch(SDL_Event event);
 };
 
 

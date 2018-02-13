@@ -1,0 +1,9 @@
+/app/src/main/jni/SDL2/
+/app/src/main/jni/SDL2_image/
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild

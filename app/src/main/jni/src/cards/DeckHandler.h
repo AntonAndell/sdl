@@ -14,6 +14,13 @@ class DeckHandler {
     vector<Card> discard_pile;
 public:
     Card get_next();
+    void shuffle();
+    int get_cards_left();
+    int get_discarded_cards();
+    void discard(Card card);
+
+private:
+
 };
 
 

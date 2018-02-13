@@ -1,5 +1,4 @@
 #include "SDL.h"
-#include "SDL_image.h"
 #include "../SDL2_image/SDL_image.h"
 #include "cards/Card.h"
 
@@ -57,7 +56,7 @@ int main(int argc, char *argv[])
         SDL_Log("SDL_Init failed: %s\n", SDL_GetError());
 
     }
-
+    //creates window and does first render
     if (SDL_CreateWindowAndRenderer(screenRect.w, screenRect.h, 0, &window, &renderer) < 0) {
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION,
                      "SDL_CreateWindowAndRenderer() failed: %s", SDL_GetError());
@@ -76,8 +75,6 @@ int main(int argc, char *argv[])
     done = 0;
     SDL_Point touchLocation = { screenRect.w / 2, screenRect.h / 2 };
     while (!done) {
-        SDL_RenderCopy(renderer, texture, NULL, NULL);
-
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT)
                 done = 1;
@@ -98,6 +95,7 @@ int main(int argc, char *argv[])
 
         //clear
         SDL_RenderClear( renderer );
+
         //GetTexture(State) somthing like this
         SDL_RenderCopy(renderer, texture, NULL, NULL);
         SDL_Rect fillRect = { touchLocation.x-10, touchLocation.y-10, 20, 20};
