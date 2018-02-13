@@ -72,10 +72,6 @@ int main(int argc, char *argv[])
         return(2);
     }
 
-    // test stuff
-    Card c = Card(a);
-    c.use();
-    //test stuff
 
     done = 0;
     SDL_Point touchLocation = { screenRect.w / 2, screenRect.h / 2 };
