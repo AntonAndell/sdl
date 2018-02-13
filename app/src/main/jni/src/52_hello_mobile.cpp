@@ -1,6 +1,7 @@
 #include "SDL.h"
 #include "SDL_image.h"
 #include "../SDL2_image/SDL_image.h"
+#include "cards/Card.h"
 
 /* XPM */
 static char * icon_xpm[] = {
@@ -31,7 +32,10 @@ static char * icon_xpm[] = {
         "          ..++++++++..          ",
         "            ........            ",
         "                                "};
-
+int a(){
+    SDL_Log("this is me");
+    return 1;
+}
 int main(int argc, char *argv[])
 {
     SDL_Window *window;
@@ -67,6 +71,11 @@ int main(int argc, char *argv[])
                      "Couldn't load texture: %s", SDL_GetError());
         return(2);
     }
+
+    // test stuff
+    Card c = Card(a);
+    c.use();
+    //test stuff
 
     done = 0;
     SDL_Point touchLocation = { screenRect.w / 2, screenRect.h / 2 };

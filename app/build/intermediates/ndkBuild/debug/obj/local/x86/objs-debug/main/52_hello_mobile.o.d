@@ -68,7 +68,9 @@ C:/Users/anton/StudioProjects/sdl/app/build/intermediates/ndkBuild/debug/obj/loc
   C:/Users/anton/StudioProjects/sdl/app/src/main/jni/SDL2/include/SDL_version.h \
   C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/../SDL2_image\SDL_image.h \
   C:/Users/anton/StudioProjects/sdl/app/src/main/jni/SDL2/include\begin_code.h \
-  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/SDL2/include\close_code.h
+  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/SDL2/include\close_code.h \
+  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/cards/Card.h \
+  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/cards/../Character.h
 
 C:/Users/anton/StudioProjects/sdl/app/src/main/jni/SDL2/include\SDL.h:
 
@@ -207,3 +209,7 @@ C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/../SDL2_image\SDL_image.h
 C:/Users/anton/StudioProjects/sdl/app/src/main/jni/SDL2/include\begin_code.h:
 
 C:/Users/anton/StudioProjects/sdl/app/src/main/jni/SDL2/include\close_code.h:
+
+C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/cards/Card.h:
+
+C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/cards/../Character.h:
