@@ -9,6 +9,10 @@ android {
         targetSdkVersion 12
     }
 
+    sourceSets.main {
+        jni.srcDirs = []
+    }
+
     buildTypes {
         release {
             minifyEnabled false

@@ -4,7 +4,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := main
 
-LOCAL_SRC_FILES := YourSourceHere.c
+LOCAL_SRC_FILES := main.cpp
 
 LOCAL_STATIC_LIBRARIES := SDL2_static
 
