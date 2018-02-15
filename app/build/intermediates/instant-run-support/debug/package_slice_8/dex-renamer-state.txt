@@ -1,4 +1,4 @@
-#Wed Feb 14 19:20:41 CET 2018
-base.0=C\:\\Users\\alex\\Documents\\prog\\sdl\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
+#Wed Feb 14 20:31:17 CET 2018
+base.0=C\:\\Users\\anton\\StudioProjects\\sdl\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
 path.0=classes.dex
 renamed.0=classes.dex
