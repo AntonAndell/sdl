@@ -68,11 +68,10 @@ C:/Users/anton/StudioProjects/sdl/app/build/intermediates/ndkBuild/debug/obj/loc
   C:/Users/anton/StudioProjects/sdl/app/src/main/jni/SDL2/include/SDL_timer.h \
   C:/Users/anton/StudioProjects/sdl/app/src/main/jni/SDL2/include/SDL_version.h \
   C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/GameStateManager.h \
-  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/GameState.h \
-  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/SDL_sysrender.h \
-  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/../SDL_internal.h \
-  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/../dynapi/SDL_dynapi.h \
-  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/SDL_yuv_sw_c.h \
+  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../game_objects/cards/CardHolder.h \
+  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../game_objects/cards/../Interactive.h \
+  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../game_objects/cards/Card.h \
+  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../game_objects/cards/../../Character.h \
   C:/Users/anton/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/stlport/stlport\vector \
   C:/Users/anton/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/stlport/stlport\stl/debug/_debug.h \
   C:/Users/anton/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/stlport/stlport\stl/_algobase.h \
@@ -108,7 +107,14 @@ C:/Users/anton/StudioProjects/sdl/app/build/intermediates/ndkBuild/debug/obj/loc
   C:/Users/anton/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/stlport/stlport\stl/_vector.c \
   C:/Users/anton/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/stlport/stlport\stl/_range_errors.h \
   C:/Users/anton/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/stlport/stlport\stl/_bvector.h \
-  C:/Users/anton/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/stlport/stlport\stl/_relops_cont.h
+  C:/Users/anton/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/stlport/stlport\stl/_relops_cont.h \
+  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/GameState.h \
+  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/SDL_sysrender.h \
+  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/../SDL_internal.h \
+  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/../dynapi/SDL_dynapi.h \
+  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/SDL_yuv_sw_c.h \
+  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/EventHandler.h \
+  C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../util/TouchUtil.cpp
 
 C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/Game.h:
 
@@ -246,15 +252,13 @@ C:/Users/anton/StudioProjects/sdl/app/src/main/jni/SDL2/include/SDL_version.h:
 
 C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/GameStateManager.h:
 
-C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/GameState.h:
+C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../game_objects/cards/CardHolder.h:
 
-C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/SDL_sysrender.h:
+C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../game_objects/cards/../Interactive.h:
 
-C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/../SDL_internal.h:
+C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../game_objects/cards/Card.h:
 
-C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/../dynapi/SDL_dynapi.h:
-
-C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/SDL_yuv_sw_c.h:
+C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../game_objects/cards/../../Character.h:
 
 C:/Users/anton/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/stlport/stlport\vector:
 
@@ -327,3 +331,17 @@ C:/Users/anton/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/st
 C:/Users/anton/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/stlport/stlport\stl/_bvector.h:
 
 C:/Users/anton/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/stlport/stlport\stl/_relops_cont.h:
+
+C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/GameState.h:
+
+C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/SDL_sysrender.h:
+
+C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/../SDL_internal.h:
+
+C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/../dynapi/SDL_dynapi.h:
+
+C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../../SDL2/src/render/SDL_yuv_sw_c.h:
+
+C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/EventHandler.h:
+
+C:/Users/anton/StudioProjects/sdl/app/src/main/jni/src/game/../util/TouchUtil.cpp:

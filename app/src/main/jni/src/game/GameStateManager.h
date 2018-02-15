@@ -5,11 +5,13 @@
 #ifndef SDL_GAMESTATEMANAGER_H
 #define SDL_GAMESTATEMANAGER_H
 
-
+#include "../game_objects/cards/CardHolder.h"
 #include "GameState.h"
 #include "../../SDL2/include/SDL_rect.h"
 #include "../../SDL2/include/SDL_events.h"
 #include "../../SDL2/src/render/SDL_sysrender.h"
+#include "EventHandler.h"
+
 #include <vector>
 
 class GameStateManager {
@@ -21,6 +23,7 @@ public:
 
     GameStateManager(SDL_Rect screen);
 private:
+    EventHandler* eventHandler;
     SDL_Rect screenRect;
     std::vector<GameState*> gamestates;
     int currentIndex;
