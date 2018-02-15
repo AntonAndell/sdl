@@ -3,7 +3,7 @@
 //
 #include <vector>
 #include "../game_objects/Interactive.h"
-#include "../util/TouchUtil.cpp"
+#include "../util/TouchUtil.h"
 
 using namespace std;
 #ifndef SDL_EVENTHANDLER_H

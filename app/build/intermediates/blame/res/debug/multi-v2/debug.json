@@ -1,11 +1,18 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\anton\\StudioProjects\\sdl\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
+            "outputFile": "C:\\Users\\alex\\Documents\\prog\\sdl\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\anton\\StudioProjects\\sdl\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\alex\\Documents\\prog\\sdl\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "48",
+                        "endOffsets": "101"
+                    },
+                    "to": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",

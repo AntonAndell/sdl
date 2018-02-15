@@ -1,0 +1,15 @@
+#Internal package file, do not edit.
+#Thu Feb 15 17:14:10 CET 2018
+1.base=C\:\\Users\\alex\\Documents\\prog\\sdl\\app\\build\\intermediates\\assets\\debug
+2.path=game_objects/cards/attack.png
+0.baseType=DIRECTORY
+2.base=C\:\\Users\\alex\\Documents\\prog\\sdl\\app\\build\\intermediates\\assets\\debug
+2.set=ASSET
+1.baseType=DIRECTORY
+count=3
+1.set=ASSET
+0.path=game_objects/cards/defend.png
+0.set=ASSET
+0.base=C\:\\Users\\alex\\Documents\\prog\\sdl\\app\\build\\intermediates\\assets\\debug
+2.baseType=DIRECTORY
+1.path=52_hello_mobile/hello.bmp

@@ -11,7 +11,7 @@ GameStateManager::GameStateManager(SDL_Rect screen) {
     GameState* state = new GameState();
     gamestates.push_back(state);
     currentIndex = 0;
-    //temporary, to be sent o specifik gamestate
+    //temporary, to be sent o specific gamestate
     eventHandler = new EventHandler();
     CardHolder* ch = new CardHolder();
     eventHandler->add_interactive(ch);
@@ -27,25 +27,31 @@ void GameStateManager::draw(SDL_Renderer *renderer) {
 
 void GameStateManager::handleEvent(SDL_Event event) {
     if (event.type == SDL_FINGERDOWN ){
+
         SDL_Point t;
         t.x = event.tfinger.x;
         t.y = event.tfinger.y;
+
         Interactive* i = eventHandler->get_touched_interactive(t);
-        i->on_touch_down(t);
+
+        if(i != NULL)
+            i->on_touch_down(t);
     }
     if (event.type == SDL_FINGERMOTION ){
         SDL_Point t;
         t.x = event.tfinger.x;
         t.y = event.tfinger.y;
         Interactive* i = eventHandler->get_touched_interactive(t);
-        i->on_touch_move(t);
+        if(i != NULL)
+            i->on_touch_move(t);
     }
     if (event.type == SDL_FINGERUP ){
         SDL_Point t;
         t.x = event.tfinger.x;
         t.y = event.tfinger.y;
         Interactive* i = eventHandler->get_touched_interactive(t);
-        i->on_touch_up(t);
+        if(i != NULL)
+            i->on_touch_up(t);
 
     }
 }

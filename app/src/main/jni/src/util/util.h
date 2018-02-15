@@ -6,6 +6,8 @@
 #define SDL_UTIL_H
 
 #include "../../SDL2/include/SDL_surface.h"
+
+
 #include <string>
 
 static SDL_Surface* loadSurface( std::string path );

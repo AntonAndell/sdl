@@ -5,8 +5,8 @@
 #ifndef SDL_GAMESTATEMANAGER_H
 #define SDL_GAMESTATEMANAGER_H
 
-#include "../game_objects/cards/CardHolder.h"
 #include "GameState.h"
+#include "../game_objects/cards/CardHolder.h"
 #include "../../SDL2/include/SDL_rect.h"
 #include "../../SDL2/include/SDL_events.h"
 #include "../../SDL2/src/render/SDL_sysrender.h"

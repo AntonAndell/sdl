@@ -11,7 +11,7 @@ double WIDTH = 0.3;
 double HEIGHT = 0.8;
 
 CardHolder::CardHolder() {
-    SDL_Rect* frame = new SDL_Rect();
+    frame = new SDL_Rect();
     frame->x=X;
     frame->y = Y;
     frame->w = WIDTH;
@@ -21,12 +21,12 @@ SDL_Rect* CardHolder::get_frame() {
     return frame;
 }
 void CardHolder::on_touch_down(SDL_Point touchlocation){
-    SDL_Log("sdasdasd");
+    SDL_Log("touch down");
 
 }
 void CardHolder::on_touch_up(SDL_Point touchlocation){
-    SDL_Log("sdasdasd");
+    SDL_Log("touch up");
 }
 void CardHolder::on_touch_move(SDL_Point touchlocation){
-    SDL_Log("sdasdasd");
+    SDL_Log("touch move");
 }
