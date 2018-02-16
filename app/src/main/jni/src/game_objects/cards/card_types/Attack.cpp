@@ -3,6 +3,3 @@
 //
 
 #include "Attack.h"
-bool use(Character hero, Character Opponent){
-    hero.health -= 10;
-}

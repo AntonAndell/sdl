@@ -2,20 +2,21 @@
 // Created by anton on 2018-02-13.
 //
 
+#include <util/TouchUtil.h>
 #include "CardHolder.h"
 
 
-double X=0;
-double Y = 0.1;
-double WIDTH = 0.3;
-double HEIGHT = 0.8;
+double X=0.1;
+double Y =0.6;
+double WIDTH = 0.8;
+double HEIGHT = 0.4;
 
 CardHolder::CardHolder() {
     frame = new SDL_Rect();
-    frame->x=X;
-    frame->y = Y;
-    frame->w = WIDTH;
-    frame->h = HEIGHT;
+    frame->x= normalize_position_to_pixels_x(X);
+    frame->y = normalize_position_to_pixels_y(Y);
+    frame->w = normalize_position_to_pixels_x(WIDTH);
+    frame->h = normalize_position_to_pixels_y(HEIGHT);
 }
 SDL_Rect* CardHolder::get_frame() {
     return frame;

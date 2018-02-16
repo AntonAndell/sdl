@@ -5,6 +5,8 @@ extern "C"
 {
 #include "SDL.h"
 }
+
+#include "/util/TouchUtil.h"
 #include "GameStateManager.h"
 
 

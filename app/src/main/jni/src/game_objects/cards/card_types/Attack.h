@@ -1,8 +1,8 @@
 //
 // Created by anton on 2018-02-13.
 //
-#include "cards/Card.h"
-#include "Character.h"
+#include "../Card.h"
+
 #ifndef SDL_ATTACK_H
 #define SDL_ATTACK_H
 

@@ -5,6 +5,7 @@
 #include "Card.h"
 #include <vector>
 #include "SDL.h"
+#include "/util/TouchUtil.h"
 
 using namespace std;
 #ifndef SDL_CARDHOLDER_H

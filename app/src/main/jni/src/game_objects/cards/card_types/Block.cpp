@@ -3,8 +3,3 @@
 //
 
 #include "Block.h"
-bool use(Character hero, Character Opponent){
-    bool use(Character hero, Character Opponent){
-        hero.block += 5;
-    }
-}

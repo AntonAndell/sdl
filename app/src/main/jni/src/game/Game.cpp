@@ -13,14 +13,7 @@ Game::Game(void){
 
 void Game::init(){
     SDL_VideoInit(NULL);
-    SDL_DisplayMode displayMode;
-    if( SDL_GetCurrentDisplayMode( 0, &displayMode ) == 0 ) {
-        screenRect.w = displayMode.w;
-        screenRect.h = displayMode.h;
-    }else{
-        SDL_Log("SDL_Init failed: %s\n", SDL_GetError());
-
-    }
+    screenRect = get_screen_size();
     //creates window and does first render
     if (SDL_CreateWindowAndRenderer(screenRect.w, screenRect.h, 0, &window, &renderer) < 0) {
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION,"SDL_CreateWindowAndRenderer() failed: %s", SDL_GetError());

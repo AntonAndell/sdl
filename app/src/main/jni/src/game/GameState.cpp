@@ -17,9 +17,11 @@ void GameState::update(){
 void GameState::draw(SDL_Renderer* renderer){
     SDL_SetRenderDrawColor( renderer, 0xFF, 0xFF, 0xFF, 0xFF );
     SDL_RenderClear(renderer);
-    SDL_Rect fillRect = { (int)x, (int)y, 70, 70};
     SDL_SetRenderDrawColor( renderer, 0xFF, 0x00, 0x00, 0xFF );
-    SDL_RenderFillRect( renderer, &fillRect );
+    //render cardhodler
+    SDL_RenderDrawRect(renderer, ch->get_frame());
+    SDL_SetRenderDrawColor( renderer, 0xFF, 0x00, 0xFF, 0xFF );
+    SDL_RenderFillRect(renderer, b->get_frame());
     SDL_RenderPresent(renderer);
 }
 void GameState::handleEvent(SDL_Event event){
