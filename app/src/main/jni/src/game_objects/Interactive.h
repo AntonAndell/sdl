@@ -12,10 +12,12 @@ class Interactive {
 public:
     //the area which it occupies
     virtual SDL_Rect* get_frame() =0;
-
-    virtual void on_touch_down(SDL_Point touchlocation)=0;
+    // can lock touch to itself on touchdown
+    virtual bool on_touch_down(SDL_Point touchlocation)=0;
     virtual void on_touch_up(SDL_Point touchlocation)=0;
     virtual void on_touch_move(SDL_Point touchlocation)=0;
+    //asked if wanting to remove lock when user moves finger outside interactive
+    virtual bool moved_outside() =0;
 };
 
 

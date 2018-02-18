@@ -24,7 +24,7 @@ public:
 
     GameStateManager(SDL_Rect screen);
 private:
-    EventHandler* eventHandler;
+
     SDL_Rect screenRect;
     std::vector<GameState*> gamestates;
     int currentIndex;

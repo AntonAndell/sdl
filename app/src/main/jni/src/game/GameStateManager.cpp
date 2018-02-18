@@ -4,22 +4,17 @@
 
 #include "GameStateManager.h"
 #include "../../SDL2/src/render/SDL_sysrender.h"
+#include "BattleState.h"
 
 GameStateManager::GameStateManager(SDL_Rect screen) {
     screenRect = screen;
 
-    GameState* state = new GameState();
+    GameState* state = new BattleState();
     gamestates.push_back(state);
 
     currentIndex = 0;
     //temporary, to be sent o specific gamestate
-    eventHandler = new EventHandler();
-    Button* b = new Button();
-    state->b = b;
-    CardHolder* ch = new CardHolder();
-    state->ch = ch;
-    eventHandler->add_interactive(ch);
-    eventHandler->add_interactive(b);
+
     //end temporary
 }
 
@@ -32,30 +27,6 @@ void GameStateManager::draw(SDL_Renderer *renderer) {
 }
 
 void GameStateManager::handleEvent(SDL_Event event) {
-    if (event.type == SDL_FINGERDOWN ){
+    gamestates[currentIndex]->handleEvent(event);
 
-        SDL_Point t;
-        t.x = normalize_position_to_pixels_x(event.tfinger.x);
-        t.y = normalize_position_to_pixels_y(event.tfinger.y);
-        Interactive* i = eventHandler->get_touched_interactive(t);
-        if(i != NULL)
-            i->on_touch_down(t);
-    }
-    if (event.type == SDL_FINGERMOTION ){
-        SDL_Point t;
-        t.x = normalize_position_to_pixels_x(event.tfinger.x);
-        t.y = normalize_position_to_pixels_y(event.tfinger.y);
-        Interactive* i = eventHandler->get_touched_interactive(t);
-        if(i != NULL)
-            i->on_touch_move(t);
-    }
-    if (event.type == SDL_FINGERUP ){
-        SDL_Point t;
-        t.x = normalize_position_to_pixels_x(event.tfinger.x);
-        t.y = normalize_position_to_pixels_y(event.tfinger.y);
-        Interactive* i = eventHandler->get_touched_interactive(t);
-        if(i != NULL)
-            i->on_touch_up(t);
-
-    }
 }

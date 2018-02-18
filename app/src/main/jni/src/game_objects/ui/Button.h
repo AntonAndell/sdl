@@ -10,15 +10,21 @@
 
 // TO BE SUPERCLASS
 //testing one button now
-class Button: public Interactive {
+class Button: public Interactive{
 public:
 
     SDL_Rect* frame;
     SDL_Rect* get_frame();
+    bool end_turn_state;
     Button();
-    void on_touch_down(SDL_Point touchlocation);
+    bool on_touch_down(SDL_Point touchlocation);
     void on_touch_up(SDL_Point touchlocation);
     void on_touch_move(SDL_Point touchlocation);
+    bool moved_outside();
+
+    bool end_turn();
+
+    void reset();
 };
 
 

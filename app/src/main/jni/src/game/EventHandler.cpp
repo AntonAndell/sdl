@@ -7,6 +7,10 @@
 
 
 Interactive* EventHandler::get_touched_interactive(SDL_Point touchLocation){
+    if (locked_interactive != NULL) {
+        SDL_Log("nope hello");
+        return locked_interactive;
+    }
     for(Interactive* i: objects){
         if (contains(i->get_frame(), touchLocation)) {
             return i;
@@ -18,3 +22,19 @@ Interactive* EventHandler::get_touched_interactive(SDL_Point touchLocation){
 void EventHandler::add_interactive(Interactive* i) {
     objects.push_back(i);
 }
+
+EventHandler::EventHandler() {
+    locked_interactive = NULL;
+}
+
+void EventHandler::lock(Interactive *i) {
+    locked_interactive = i;
+}
+void EventHandler::unlock(){
+    locked_interactive = NULL;
+}
+
+Interactive *EventHandler::get_locked() {
+    return locked_interactive;
+}
+

@@ -21,13 +21,16 @@ CardHolder::CardHolder() {
 SDL_Rect* CardHolder::get_frame() {
     return frame;
 }
-void CardHolder::on_touch_down(SDL_Point touchlocation){
+bool CardHolder::on_touch_down(SDL_Point touchlocation){
     SDL_Log("touch down");
-
+    return true;
 }
 void CardHolder::on_touch_up(SDL_Point touchlocation){
     SDL_Log("touch up");
 }
 void CardHolder::on_touch_move(SDL_Point touchlocation){
     SDL_Log("touch move");
+}
+bool CardHolder::moved_outside(){
+
 }

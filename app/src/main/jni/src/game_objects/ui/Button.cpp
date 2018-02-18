@@ -11,16 +11,29 @@ Button::Button() {
     frame->y = normalize_position_to_pixels_y(0.6);
     frame->w = normalize_position_to_pixels_x(0.1);
     frame->h = normalize_position_to_pixels_y(0.3);
+    end_turn_state = false;
 }
 SDL_Rect* Button::get_frame() {
     return frame;
 }
-void Button::on_touch_down(SDL_Point touchlocation){
-    SDL_Log("turn ended");
+bool Button::on_touch_down(SDL_Point touchlocation){
+    return true;
 }
 void Button::on_touch_up(SDL_Point touchlocation){
-    SDL_Log("doing nothing");
+    end_turn_state = true;
+
 }
 void Button::on_touch_move(SDL_Point touchlocation){
-    SDL_Log("should do something");
+    SDL_Log("doing nothing");
+}
+
+bool Button::end_turn() {
+    return end_turn_state;
+}
+void Button::reset(){
+    end_turn_state = false;
+}
+
+bool Button::moved_outside(){
+    return true;
 }

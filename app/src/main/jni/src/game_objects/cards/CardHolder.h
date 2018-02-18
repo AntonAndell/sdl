@@ -21,10 +21,10 @@ public:
     SDL_Rect* frame;
     CardHolder();
     SDL_Rect* get_frame();
-    void on_touch_down(SDL_Point touchlocation);
+    bool on_touch_down(SDL_Point touchlocation);
     void on_touch_up(SDL_Point touchlocation);
     void on_touch_move(SDL_Point touchlocation);
-
+    bool moved_outside();
 };
 
 
