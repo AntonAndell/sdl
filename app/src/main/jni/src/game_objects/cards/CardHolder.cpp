@@ -49,6 +49,7 @@ void CardHolder::set_card_position(Card* c , int hand_size, int position, int he
         position = position-(hand_size-2)/2;
         c_center_x += 0.07*position;
         c_center_y += abs(0.015*position);
+
         c->center.x = normalize_position_to_pixels_x(c_center_x);
         c->center.y = normalize_position_to_pixels_y(c_center_y);
         c->angle = +5*position;
