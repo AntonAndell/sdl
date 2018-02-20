@@ -8,8 +8,8 @@
 
 class Character {
 public:
-    int health = 80;
-    int block = 0;
+
+
 };
 
 

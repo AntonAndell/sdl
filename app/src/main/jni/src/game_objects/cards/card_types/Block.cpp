@@ -3,3 +3,8 @@
 //
 
 #include "Block.h"
+
+SDL_Texture *Block::get_image(SDL_Renderer* r) {
+
+}
+

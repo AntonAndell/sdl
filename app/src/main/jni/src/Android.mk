@@ -18,7 +18,6 @@ FILE_LIST := $(filter %.cpp, $(ALLFILES))
 
 LOCAL_SRC_FILES := $(FILE_LIST:$(LOCAL_PATH)/%=%)
 # Add your application source files here...
-#LOCAL_SRC_FILES := main.cpp game/Game.cpp game/GameStateManager.cpp game/GameState.cpp util/TouchUtil.cpp game_objects/cards/CardHolder.cpp game_objects/Interactive.cpp game/EventHandler.cpp
 
 LOCAL_SHARED_LIBRARIES := SDL2 SDL2_image
 

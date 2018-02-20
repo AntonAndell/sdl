@@ -3,6 +3,7 @@
 //
 #include <vector>
 #include "Card.h"
+#include "game_objects/cards/card_types/Attack.h"
 using namespace std;
 
 #ifndef SDL_DECKHANDLER_H
@@ -10,14 +11,9 @@ using namespace std;
 
 
 class DeckHandler {
-    vector<Card> draw_pile;
-    vector<Card> discard_pile;
 public:
-    Card get_next();
-    void shuffle();
-    int get_cards_left();
-    int get_discarded_cards();
-    void discard(Card card);
+    Card* get_next();
+
 
 private:
 

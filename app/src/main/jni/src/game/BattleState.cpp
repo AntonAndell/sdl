@@ -19,7 +19,8 @@ BattleState::BattleState(){
 void BattleState::update(){
     if(end_turn_button->end_turn()){
         end_turn_button->reset();
-        SDL_Log("!hey");
+        ch->next_turn();
+        SDL_Log("ended turnenenen");
     }
 }
 void BattleState::draw(SDL_Renderer* renderer){
@@ -31,6 +32,7 @@ void BattleState::draw(SDL_Renderer* renderer){
     SDL_RenderDrawRect(renderer, ch->get_frame());
     SDL_SetRenderDrawColor( renderer, 0xFF, 0x00, 0xFF, 0xFF );
     SDL_RenderFillRect(renderer, end_turn_button->get_frame());
+    ch->draw(renderer);
     SDL_RenderPresent(renderer);
 }
 
