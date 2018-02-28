@@ -11,7 +11,7 @@
 
 class DrawableEntity {
 public:
-    virtual void draw(SDL_Renderer* r) =0;
+    virtual void draw() =0;
 };
 
 

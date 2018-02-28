@@ -4,6 +4,7 @@
 #include <game_objects/DrawableEntity.h>
 #include "../../Character.h"
 #include "SDL.h"
+#include "../../util/Graphics_manager.h"
 #ifndef SDL_CARD_H
 #define SDL_CARD_H
 class Card: public DrawableEntity
@@ -12,8 +13,8 @@ class Card: public DrawableEntity
 
 public:
 
-    virtual SDL_Texture* get_image(SDL_Renderer*)=0;
-    void draw(SDL_Renderer* r);
+    virtual SDL_Texture* get_image()=0;
+    void draw();
 
     SDL_Point center;
     SDL_Texture* img;

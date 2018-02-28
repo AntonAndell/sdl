@@ -13,6 +13,7 @@ double HEIGHT = 0.4;
 double STANDARD_CARD_HEIGHT = 0.4;
 double STANDARD_CARD_WIDTH = 0.15;
 
+
 CardHolder::CardHolder() {
     frame = new SDL_Rect();
     frame->x= normalize_position_to_pixels_x(X);
@@ -24,13 +25,23 @@ SDL_Rect* CardHolder::get_frame() {
     return frame;
 }
 bool CardHolder::on_touch_down(SDL_Point touchlocation){
-
     return true;
 }
-void CardHolder::on_touch_up(SDL_Point touchlocation){
-
+bool CardHolder::on_touch_up(SDL_Point touchlocation, bool outside){
+    return true;
 }
-void CardHolder::on_touch_move(SDL_Point touchlocation){
+bool CardHolder::on_touch_move(SDL_Point touchlocation,  bool outside){
+    for(auto card:hand){
+        if (contains(&card->rect, touchlocation)){
+            ocp.c->rect = ocp.old_rect;
+            ocp.c->angle = ocp.angle;
+            ocp.c->draw();
+            ocp.old_rect = card->rect;
+            ocp.angle = card->angle;
+            ocp.c = card;
+            card->rect.y -= normalize_position_to_pixels_y(0.1);
+        }
+    }
 
 }
 bool CardHolder::moved_outside(){
@@ -70,13 +81,17 @@ void CardHolder::set_card_position(Card* c , int hand_size, int position, int he
 }
 void CardHolder::draw_card() {
     hand.insert(hand.begin(), dh->get_next());
-}
-
-void CardHolder::draw(SDL_Renderer* r) {
     for(int i = 0; i<hand.size(); i++){
         set_card_position(hand[i], hand.size(), i, normalize_position_to_pixels_x(STANDARD_CARD_WIDTH), normalize_position_to_pixels_y(STANDARD_CARD_HEIGHT));
-        hand[i]->draw(r);
+        hand[i]->draw();
     }
+}
+
+void CardHolder::draw() {
+    for(int i = 0; i<hand.size(); i++){
+        hand[i]->draw();
+    }
+
 }
 
 void CardHolder::next_turn() {

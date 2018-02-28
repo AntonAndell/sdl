@@ -5,8 +5,8 @@
 #include "Attack.h"
 #include "../../../../SDL2_image/SDL_image.h"
 
-SDL_Texture *Attack::get_image(SDL_Renderer* r) {
-    return IMG_LoadTexture(r, "game_objects/cards/attack.png");
+SDL_Texture *Attack::get_image() {
+    return get_texture_from_path("game_objects/cards/attack.png");
 }
 
 Attack::Attack() {

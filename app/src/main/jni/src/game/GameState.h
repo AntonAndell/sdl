@@ -12,7 +12,7 @@ class GameState {
 public:
 
     virtual void update();
-    virtual void draw(SDL_Renderer* );
+    virtual void draw( );
     virtual void handleEvent(SDL_Event event);
 
     GameState();

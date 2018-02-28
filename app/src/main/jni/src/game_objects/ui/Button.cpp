@@ -19,11 +19,11 @@ SDL_Rect* Button::get_frame() {
 bool Button::on_touch_down(SDL_Point touchlocation){
     return true;
 }
-void Button::on_touch_up(SDL_Point touchlocation){
+bool Button::on_touch_up(SDL_Point touchlocation,  bool outside){
     end_turn_state = true;
 
 }
-void Button::on_touch_move(SDL_Point touchlocation){
+bool Button::on_touch_move(SDL_Point touchlocation,  bool outside){
     SDL_Log("doing nothing");
 }
 

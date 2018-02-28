@@ -1,10 +1,9 @@
 //
 // Created by alex on 2/14/2018.
 //
-extern "C"
-{
+
 #include "SDL.h"
-}
+
 
 #include "/util/TouchUtil.h"
 #include "GameStateManager.h"
@@ -22,7 +21,6 @@ public:
 
     SDL_Point touchLocation;
     SDL_Window *window;
-    SDL_Renderer *renderer;
     SDL_Rect screenRect;
     SDL_Event event;
 

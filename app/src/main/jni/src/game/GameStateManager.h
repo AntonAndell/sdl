@@ -19,7 +19,7 @@ class GameStateManager {
 
 public:
     void update();
-    void draw(SDL_Renderer *renderer);
+    void draw();
     void handleEvent(SDL_Event event);
 
     GameStateManager(SDL_Rect screen);

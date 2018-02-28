@@ -7,12 +7,8 @@
 
 
 
-void Card::draw(SDL_Renderer* r) {
-
-    if (get_image(r)==0){
-        SDL_Log("nope biaaatch");
-    }
-    SDL_RenderCopyEx(r,get_image(r), NULL, &rect,angle,NULL,SDL_FLIP_NONE);
+void Card::draw() {
+    render_ex(get_image(), rect,angle);
 }
 
 

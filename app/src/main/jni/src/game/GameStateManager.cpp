@@ -22,8 +22,8 @@ void GameStateManager::update() {
     gamestates[currentIndex]->update();
 }
 
-void GameStateManager::draw(SDL_Renderer *renderer) {
-    gamestates[currentIndex]->draw(renderer);
+void GameStateManager::draw() {
+    gamestates[currentIndex]->draw();
 }
 
 void GameStateManager::handleEvent(SDL_Event event) {

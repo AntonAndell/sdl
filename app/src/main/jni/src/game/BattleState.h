@@ -6,7 +6,6 @@
 #define SDL_BATTLESTATE_H
 
 
-#include "../../SDL2/include/SDL_render.h"
 #include "../../SDL2/include/SDL_events.h"
 #include "../game_objects/ui/Button.h"
 #include "../game_objects/cards/CardHolder.h"
@@ -19,7 +18,7 @@ public:
 
     SDL_Texture* image;
     void update();
-    void draw(SDL_Renderer* );
+    void draw( );
     void handleEvent(SDL_Event event);
 
 private:

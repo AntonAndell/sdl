@@ -9,8 +9,8 @@
 
 
 class Block: public Card{
-    SDL_Texture* get_image(SDL_Renderer*);
-    void Draw(SDL_Renderer*);
+    SDL_Texture* get_image();
+    void Draw();
 };
 
 

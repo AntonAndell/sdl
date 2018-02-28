@@ -3,7 +3,9 @@
 //
 #include "Game.h"
 #include "../../SDL2/include/SDL.h"
+#include "../util/Graphics_manager.h"
 
+SDL_Renderer* renderer = new SDL_Renderer();
 Game::Game(void){
     init();
 
@@ -13,20 +15,19 @@ Game::Game(void){
 
 void Game::init(){
     SDL_VideoInit(NULL);
+
     screenRect = get_screen_size();
     //creates window and does first render
     if (SDL_CreateWindowAndRenderer(screenRect.w, screenRect.h, 0, &window, &renderer) < 0) {
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION,"SDL_CreateWindowAndRenderer() failed: %s", SDL_GetError());
     }
 
-
     SDL_SetWindowSize(window, 800, 480);
     gsm = new GameStateManager(screenRect);
-    SDL_RenderClear( renderer );
 }
 
 void Game::draw() {
-    gsm->draw(renderer);
+    gsm->draw();
 }
 
 void Game::gameLoop(){
